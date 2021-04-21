@@ -1,9 +1,5 @@
-const { response } = require('express');
 const express = require('express');
 const router = express.Router();
-
-
-
 const mysql = require('mysql');
 
 // MySQL Create Connection
@@ -27,26 +23,32 @@ connection.connect(function(err) {
     console.log("Connected!");
 });
 
-// router.use(express.urlencoded({extended: true}));
 
-// Get a user
+// Add User
 router.post('/addUser', (request, response) => 
 {
 
     connection.query(`Insert into user(name, gameCompleted) values('${request.body.name}', false);`, function(err, result) {
         if (err) throw err;
-
         response.render("ankuser", {userName: request.body.Name, usergameCompleted : false});
     });
 
 });
 
+// Change gameCompleted variable in database
+router.post('/gameComplete', (request, response) => 
+{
+    connection.query(`Update user gameCompleted=${request.body.gameCompleted} where name=${request.body.name}}`, function(err, result) {
+        if (err) throw err;
+        console.log(result);
+        response.sendStatus("200");
+    });
+});
+
 // Get all users
 router.get('/users', (request, response) => 
 {
-
     connection.query(`select * from user;`, function(err, result) {
-
         if (err) throw err;
         response.render("ankallUsers", { users: result });
     });
