@@ -1,3 +1,23 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | Ankakh</title>
+
+    <link rel= "stylesheet" href="web1.css">
+    <script src="Build/UnityLoader.js"></script>
+
+    <script>
+      function main()
+      {
+        let unityInstance = UnityLoader.instantiate("unityContainer", "Build/build.json");
+        //document.getElementById("unityContainer").style = "";
+      }    
+    </script>
+  </head>
+
+  <body onload= "main()">
     <div id= "layout">
       <div id="titulo">
         <h1> ANKAKH</h1>
@@ -33,7 +53,7 @@
       </div>
 
       <div id="gameContainer">
-        {{!-- <div id="unityContainer" style="width: 1440px; height: 1080px; margin: auto"></div> --}}
+        <div id="unityContainer" style="width: 1440px; height: 1080px; margin: auto"></div>
       </div>
       </div>
   
@@ -41,5 +61,4 @@
     
   </body>
 
-
-
+</html>
