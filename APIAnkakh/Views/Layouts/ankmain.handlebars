@@ -6,8 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/ankstyle.css">
     <title>API ANKAKH</title>
+    <script src="/Build/UnityLoader.js"></script>
+    <script>
+        function main()
+        {
+            console.log("corriendo");
+            let unityInstance = UnityLoader.instantiate("unityContainer", "/Build/APIAnkakh.json");
+            //document.getElementById("unityContainer").style = "";
+        }
+    </script>
 </head>
-<body>
+<body onload="main()">
     <div class="container">
         {{{body}}}
     </div>
