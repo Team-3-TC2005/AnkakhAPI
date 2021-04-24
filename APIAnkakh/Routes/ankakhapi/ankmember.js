@@ -38,9 +38,9 @@ router.post('/addUser', (request, response) =>
 // Change gameCompleted variable in database
 router.post('/gameComplete', (request, response) => 
 {
-    connection.query(`Update user gameCompleted=${request.body.gameCompleted} where name=${request.body.name}}`, function(err, result) {
+    
+    connection.query(`Update user set gameCompleted=${true} where name='${request.body.name}';`, function(err, result) {
         if (err) throw err;
-        console.log(result);
         response.sendStatus("200");
     });
 });
