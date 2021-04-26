@@ -1,0 +1,56 @@
+body {
+  background-color: lightblue;
+}
+#layout {
+  height: 100%;
+  display: grid;
+
+  grid-template-areas:
+    "titulo titulo titulo"
+    "infoJuego infoJuego screenshots "
+    "game game screenshots "
+    "game game screenshots ";
+}
+#titulo {
+  grid-area: titulo;
+  text-align: center;
+  margin: 10px;
+  padding: 10px;
+  border: 5px dashed cadetblue;
+}
+
+#infoJuego {
+  grid-area: infoJuego;
+  text-align: center;
+  margin: 10px;
+  padding: 10px;
+  border: 5px dashed cadetblue;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+#gameContainer {
+  grid-area: game;
+  border: 5px dashed cadetblue;
+  margin: 10px;
+  padding: 10px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+#screenshots {
+  grid-area: screenshots;
+  justify-content: space-between;
+  text-align: center;
+
+  margin: 10px;
+  padding: 10px;
+  border: 5px dashed cadetblue;
+}
