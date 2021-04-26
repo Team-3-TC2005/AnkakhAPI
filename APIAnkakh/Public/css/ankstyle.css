@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body {
   background-color: lightblue;
 }
@@ -54,3 +55,66 @@ body {
   padding: 10px;
   border: 5px dashed cadetblue;
 }
+=======
+body{
+    background-color:lightblue;
+}
+#layout{
+    height: 100vh;
+    display: grid;
+
+    /*grid-template-columns: 
+    1fr 1fr 1fr;
+
+    grid-template-rows: 
+    1fr 1fr 3fr 1fr;*/
+
+    grid-template-areas: 
+    "titulo titulo titulo"
+    "infoJuego infoJuego infoJuego "
+    "screenshots screenshots screenshots"
+    "game game game "
+    "game game game "
+    "game game game "
+    ;
+}
+#titulo{
+    grid-area: titulo;
+    text-align: center;
+    margin: 1em;
+    padding: 1em;
+    border: 5px dashed cadetblue; 
+}
+
+#infoJuego{
+    grid-area: infoJuego;
+    text-align: center;
+    margin: 1em;
+    padding: 1em;
+    border: 5px dashed cadetblue; 
+}
+
+#gameContainer{
+    grid-area: game;
+    /*display: flex;*/
+    justify-content: center;
+    border: 5px dashed cadetblue; 
+    margin: 0;
+    padding: 50px;
+    /*min-width: 800px;
+    min-height: 600px;*/
+    /*max-width: 100%;
+    max-height: 100%;*/
+}
+
+#screenshots{
+    grid-area: screenshots;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    
+    margin: 1em;
+    padding: 1em;
+    border: 5px dashed cadetblue; 
+}
+>>>>>>> d511289170a7fab055c799e17d327944a56ca7fe

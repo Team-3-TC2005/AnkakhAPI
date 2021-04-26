@@ -1,3 +1,9 @@
+# # Unity Game
+
+# *.unityweb
+# APIAnkakh.json
+# UnityLoader.js
+
 # Logs
 logs
 *.log
